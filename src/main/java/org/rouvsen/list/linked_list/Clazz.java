@@ -1,4 +1,4 @@
-package org.rouvsen.linked_list;
+package org.rouvsen.list.linked_list;
 
 import java.util.Collections;
 import java.util.LinkedList;
