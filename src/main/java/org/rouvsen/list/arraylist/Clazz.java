@@ -1,5 +1,6 @@
 package org.rouvsen.list.arraylist;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -83,12 +84,27 @@ public class Clazz {
 //
 //        stringsToSearch.forEach(System.out::println);
 
-        List<String> copy = new ArrayList<>(List.of("c", "b", "a"));
-        Collections.sort(copy);
-        int index = Collections.binarySearch(copy, "f");
+//        List<String> copy = new ArrayList<>(List.of("c", "b", "a"));
+//        Collections.sort(copy);
+//        int index = Collections.binarySearch(copy, "f");
 //        assertThat(index, not(equalTo(-1)));  //Notice that if an element is not found then -1 will be returned.
 
+//        ArrayList<String> list = new ArrayList<>(List.of("a", "b", "c"));
+//        List<String> unmodifiableList = Collections.unmodifiableList(list);
+//        unmodifiableList.add("d"); //UnsupportedOperationException
 
+//        ArrayList<String> list = new ArrayList<>(List.of("a", "b", "c"));
+//        List<String> modifiableList = new ArrayList<>(Collections.unmodifiableList(list));
+//        modifiableList.add("d"); //UnsupportedOperationException
+//        modifiableList.forEach(System.out::println);
 
+//        thenNotModifiable();
+
+    }
+    public static void thenNotModifiable() { // it will throw -> UnSupportedException
+        final List<String> list = new ArrayList<>(Arrays.asList("one", "two", "three"));
+        final List<String> unmodifiableList =
+                List.of( list.toArray( new String[]{} ) );
+        unmodifiableList.add("four");
     }
 }
