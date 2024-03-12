@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BinarySearchExample {
     public static void main(String[] args) {
         int[] arr = {5,2,7,3,14,55,23,77};
-        int res = searchBinary(arr, 14);
+        int res = searchBinary(arr, 14);//
         if (res == -1) {
             System.out.println("Couldn't find the concrete value");
         } else {
