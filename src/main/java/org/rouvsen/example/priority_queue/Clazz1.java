@@ -1,4 +1,4 @@
-package org.rouvsen.example;
+package org.rouvsen.example.priority_queue;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

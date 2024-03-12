@@ -1,4 +1,4 @@
-package org.rouvsen.example;
+package org.rouvsen.example.priority_queue;
 
 public class Human implements Comparable<Human> {
     private String name;
